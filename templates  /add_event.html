@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<section>
+		<h1> Add event to the database </h1>
+		Please fill in the necessary fields and submit:
+
+		<form method="POST">
+		  <div class="mb-3">
+			<label for="event_name" class="form-label">Event name:</label>
+			<input class="form-control" id="event_name" name="event_name">
+		  </div>
+		  <div class="mb-3">
+			<label for="event_date" class="form-label">Event date:</label>
+			<input class="form-control" id="event_date" name="event_date">
+		  </div>
+		  <div class="mb-3">
+			<select class="form-select" aria-label="Default select example" name="event_category">
+			  <option selected>Select category...</option>
+			  <option value="it">IT</option>
+			  <option value="show">Show</option>
+			  <option value="concert">Concert</option>
+			</select>
+		  </div>
+			<div><p></p><p class="fs-4">Please check you input and submit afterwards.</p></div>
+
+		  <button type="submit" class="btn btn-primary"> Submit </button>
+		</form>
+
+	</section>
+{% endblock %}
